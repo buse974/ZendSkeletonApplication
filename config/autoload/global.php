@@ -12,5 +12,24 @@
  */
 
 return array(
-    // ...
+	'dal-conf' => array(
+		'adapter' => 'db-adapter',
+		'cache'   => 'storage_memcached',
+		'log'     => 'log-system',
+		'namespace' => array(
+			'demo' => array(
+				'service' => 'Application\\Service',
+				'mapper'  => 'Application\\Mapper',
+				'model'   => 'Application\\Model',
+			),
+		),
+	),
+	'json-rpc-server' => array(
+		'cache' => 'storage_memcached',
+		'log' => 'log-system',
+		'persistence' => true,
+		'services' => array(
+			'demo_service_demo',
+		),
+	),
 );

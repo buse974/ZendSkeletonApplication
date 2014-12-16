@@ -3,6 +3,10 @@ return array(
     // This should be an array of module namespaces used in the application.
     'modules' => array(
         'Application',
+    	'Dal',
+    	'JRpc',
+    	'Address',
+    	'Dms',
     ),
 
     // These are various options for the listeners attached to the ModuleManager
@@ -12,8 +16,11 @@ return array(
         // namespace, the value of that key the specific path to that module's
         // Module class.
         'module_paths' => array(
-            './module',
-            './vendor',
+        	'Dal'         => __DIR__ . '/../vendor/buse974/dal',
+        	'JRpc'        => __DIR__ . '/../vendor/buse974/jrpc',
+        	'Address'     => __DIR__ . '/../vendor/buse974/address',
+        	'Dms'         => __DIR__ . '/../vendor/buse974/dms',
+        	'Application' => __DIR__ . '/../module/Application',
         ),
 
         // An array of paths from which to glob configuration files after
